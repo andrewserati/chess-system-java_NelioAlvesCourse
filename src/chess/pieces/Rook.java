@@ -39,7 +39,7 @@ public class Rook extends ChessPiece {
             p.setColumn(p.getColumn()-1);
         }
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)){
-            p.setColumn(p.getColumn()-1);
+            mat[p.getRow()][p.getColumn()] = true;
         }
 
         //right
@@ -49,7 +49,7 @@ public class Rook extends ChessPiece {
             p.setColumn(p.getColumn()+1);
         }
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)){
-            p.setColumn(p.getColumn()+1);
+            mat[p.getRow()][p.getColumn()] = true;
         }
 
         //below
